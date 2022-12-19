@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "1644f8f7-04c3-494c-a9d7-ef3aaff113b3",
+		"name": "infigrow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vishnu@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vishnu@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sample_catch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNDc0MjQ2LCJpYXQiOjE2NzE0NzM5NDYsImp0aSI6IjRhZDQxMDI4ZmMyYTQzN2FhZmFjZTIyYzQ4NzhjYjkyIiwidXNlcl9pZCI6MX0.VIu7AMn1nDAzXd94a5rBp6j_Rn_cZiPsDv7RbpfaO4Q",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/hello",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swap ledger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ledger1\":\"A\",\n    \"ledger2\":\"B\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/swap?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNDc0MjQ2LCJpYXQiOjE2NzE0NzM5NDYsImp0aSI6IjRhZDQxMDI4ZmMyYTQzN2FhZmFjZTIyYzQ4NzhjYjkyIiwidXNlcl9pZCI6MX0.VIu7AMn1nDAzXd94a5rBp6j_Rn_cZiPsDv7RbpfaO4Q",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"swap"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNDc0MjQ2LCJpYXQiOjE2NzE0NzM5NDYsImp0aSI6IjRhZDQxMDI4ZmMyYTQzN2FhZmFjZTIyYzQ4NzhjYjkyIiwidXNlcl9pZCI6MX0.VIu7AMn1nDAzXd94a5rBp6j_Rn_cZiPsDv7RbpfaO4Q"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "move ledger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ledger1\":\"A\",\n    \"ledger2\":\"B\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/move?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNDc0MjQ2LCJpYXQiOjE2NzE0NzM5NDYsImp0aSI6IjRhZDQxMDI4ZmMyYTQzN2FhZmFjZTIyYzQ4NzhjYjkyIiwidXNlcl9pZCI6MX0.VIu7AMn1nDAzXd94a5rBp6j_Rn_cZiPsDv7RbpfaO4Q",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"move"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcxNDc0MjQ2LCJpYXQiOjE2NzE0NzM5NDYsImp0aSI6IjRhZDQxMDI4ZmMyYTQzN2FhZmFjZTIyYzQ4NzhjYjkyIiwidXNlcl9pZCI6MX0.VIu7AMn1nDAzXd94a5rBp6j_Rn_cZiPsDv7RbpfaO4Q"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
